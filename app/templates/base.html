@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../static/index.css" type="text/css">
+    <link rel="stylesheet" href="../static/reset.css" type="text/css">
+    <script type="text/javascript" src="../static/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../static/index.js"></script>
+</head>
+<body>
+<!--顶部菜单栏-->
+<div class="top_menu">
+    <div class="title">自动化测试平台</div>
+    <div class="menu_list">
+        <ul>
+<!--            加a标签进行跳转-->
+            <a href=""><li>首页</li></a>
+            <a href=""><li>接口列表</li></a>
+            <a href=""><li>用例列表</li></a>
+            <a href=""><li>套件列表</li></a>
+            <a href=""><li>测试报告</li></a>
+        </ul>
+
+    </div>
+    <div class="top_user">
+        <a href="" >注销用户</a>
+
+    </div>
+
+</div>
+<!--侧边菜单-->
+<div class="left_menu">
+    <div class="left_title">
+        项目管理
+    </div>
+    <div class="left_menu_li">
+        <ul>
+            <li>
+                <h3>接口管理</h3>
+                <ul class="hide">
+                    <li class="leftList"><a href="">添加接口</a></li>
+                    <li class="leftList"><a href="">接口列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>用例管理</h3>
+                <ul class="hide">
+                    <li class="leftList"><a href="">添加用例</a></li>
+                    <li class="leftList"><a href="">用例列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>测试计划</h3>
+                <ul class="hide">
+                    <li class="leftList"><a href="">添加计划</a></li>
+                    <li class="leftList"><a href="">计划列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>报告管理</h3>
+                <ul class="hide">
+                    <li class="leftList"><a href="">添加报告</a></li>
+                    <li class="leftList"><a href="">报告列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>配置管理</h3>
+                <ul class="hide">
+                    <li class="leftList"><a href="">添加配置</a></li>
+                    <li class="leftList"><a href="">配置列表</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+    </div>
+
+</div>
+<!--内容部分-->
+<div class="content">
+    <div class="pro_info">
+        <div class="pro_title">项 目 A</div>
+        <p>用例数量:44</p>
+        <p>接口数量:5</p>
+         <div class="pro_delete">
+            <div class="delete_info"><a href="">删除项目</a></div>
+        </div>
+    </div>
+        <div class="pro_info">
+        <div class="pro_title">项 目 B</div>
+        <p>用例数量:44</p>
+        <p>接口数量:5</p>
+        <div class="pro_delete">
+            <div class="delete_info"><a href="">删除项目</a></div>
+        </div>
+    </div>
+        <div class="pro_info" >
+        <div class="pro_title">项 目 C</div>
+        <p>用例数量:44</p>
+        <p>接口数量:5</p>
+        <div class="pro_delete">
+            <div class="delete_info"><a href="">删除项目</a></div>
+        </div>
+        </div>
+        <div class="pro_info">
+        <div class="pro_title">项 目 d</div>
+        <p>用例数量:44</p>
+        <p>接口数量:5</p>
+         <div class="pro_delete">
+            <div class="delete_info"><a href="">删除项目</a></div>
+        </div>
+    </div>
+        <div class="pro_info" >
+        <div class="pro_title">项 目 E</div>
+        <p>用例数量:44</p>
+        <p>接口数量:5</p>
+         <div class="pro_delete">
+            <div class="delete_info"><a href="">删除项目</a></div>
+        </div>
+    </div>
+        <div class="pro_info" id="addPro" >
+            <img src="../static/image/加号_gaitubao_48x48.png" alt="">
+        </div>
+
+    </div>
+
+<!-- 增加项目弹框-->
+<div class="back hide">
+    <div class="addPro">
+    <div class="proTitle">新 增 项 目</div>
+    <div class="closeImage">
+        <img src="../static/image/叉.png" >
+    </div>
+    <form action="" method="post">
+        <div class="addform">
+            <label for="proName">项 目 名 称：</label>
+            <input type="text" name="proName"></div>
+        <div class="addform">
+            <label for="url">项 目 地 址：</label>
+            <input type="text" name="url"></div>
+        <div class="addform">
+            <label for="textPeople">测 试 人 员：</label>
+            <input type="text" name="textPeople"></div>
+        <div class="addform">
+            <label for="textPeople">项 目 描 述：</label>
+            <textarea name="proText" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="SubmissionPro">
+            <input type="submit" value="提交">
+        </div>
+
+
+    </form>
+
+</div>
+</div>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

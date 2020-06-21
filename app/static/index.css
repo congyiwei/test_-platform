@@ -1,0 +1,250 @@
+body{
+    background-color: #f1e3ff;
+}
+
+
+.top_menu{
+    height: 80px;
+    /*设置颜色*/
+    /*background: blue;*/
+    /*background: rgb(200,200,200);*/
+    background: #0033CC;
+}
+.title{
+    /*设置文字颜色*/
+    color: white;
+    /*设置文字大小*/
+    /*font-size: 36px;*/
+    /*设置文字加粗  normal不加粗*/
+    /*font-weight: bold;*/
+    /*font-family: '微软雅黑';*/
+    /*是否加粗 字体大小 行高  字体*/
+    font: normal 32px/80px "Microsoft YaHei";
+    width: 350px;
+    /*水平居中*/
+    text-align: center;
+    float: left;
+}
+.menu_list{
+    width: 800px;
+    height: 80px;
+    float: left;
+}
+/*层级选择器 选择上级后 在后面加空格可以再次选择*/
+.menu_list li{
+    /*元素做一个浮动 到一行里*/
+    float: left;
+    width: 150px;
+    height: 80px;
+    font: normal 22px/80px"Microsoft YaHei";
+    text-align: center;
+    color: white;
+}
+/*当鼠标移动至修改颜色*/
+.menu_list li:hover{
+    background: #579fff;
+}
+.top_user{
+    float: right;
+    font: normal 16px/40px "Microsoft YaHei";
+    margin-left: 25px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.top_user a{
+    color: white;
+}
+/* 将ul的margin 外边距设为0*/
+.menu_list ul{
+    /*去掉列表 前面的点*/
+    list-style: none;
+}
+/*标签选择器*/
+/*a,p,body{*/
+/*    */
+/*}*/
+/*组选择器*/
+/*.menu_list,.title{*/
+/*    */
+/*    */
+/*}*/
+.en{
+    height: 25px;
+}
+/*侧边栏样式*/
+.left_menu{
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 260px;
+    height: 1000px;
+    background: white;
+}
+
+.left_title{
+    background: #3e98ff;
+    color: white;
+    height: 80px;
+    width: 100%;
+    float: left;
+    font: normal 24px/80px "Microsoft YaHei";
+    /*缩进*/
+    text-indent: 50px;
+}
+
+.left_menu_li h3{
+    list-style: none;
+    border-bottom: solid 1px aliceblue;
+    color: black;
+    height: 60px;
+    width: 100%;
+    float: left;
+    font: normal 20px/60px "Microsoft YaHei";
+    /*缩进*/
+    text-indent: 50px;
+    background-image: url("image/jiantou.png");
+    background-repeat: no-repeat;
+    background-position: 190px;
+}
+.leftList{
+    font: normal 15px/30px "Microsoft YaHei";
+    height: 30px;
+    width: 100%;
+    float: left;
+    text-indent: 60px;
+    background-color: #f1e3ff;
+}
+.leftList a{
+    color: #5c79ed;
+}
+/*.left_menu_li div{*/
+/*    width: 10%;*/
+/*    height: 15px;*/
+/*    background-images: url("images/left.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-color:white;*/
+/*    float: left;*/
+/*    margin-top: 25px;*/
+/*    margin-right: 15px;*/
+/*}*/
+/*主体内容部分样式*/
+.content{
+    width: 900px;
+    height: 1000px;
+    position: absolute;
+    left: 280px;
+    top: 120px;
+    background: white;
+    padding-left: 60px;
+    float: left;
+}
+.pro_info{
+    width: 220px;
+    height: 180px;
+    border: solid 1px #9297a2;
+    margin: 25px;
+    float: left;
+    border-radius: 10px;
+    text-align: center;
+}
+.pro_title{
+    width: 100%;
+    height: 60px;
+    font: normal 28px/50px "Microsoft YaHei";
+    background: #d7bfff;
+    color: black;
+    /*设置角的弧度*/
+    border-top-left-radius: 10px;
+}
+.pro_info p{
+    font: normal 18px/30px "Microsoft YaHei";
+    color: rgba(0, 0, 0, 0.47);
+}
+
+.pro_info img{
+    margin-top: 70px;
+}
+.pro_delete{
+    margin-top: 10px;
+
+}
+.delete_info{
+    background: blue;
+    border-radius: 15px;
+    width: 100px;
+    margin-left: 60px;
+
+}
+.pro_delete a{
+    font: normal 15px/30px "Microsoft YaHei";
+    color: white;
+    border-radius: 10px;
+}
+/*增加项目样式*/
+.addPro{
+    width:450px;
+    height: 450px;
+    position: fixed;
+    left: 455px;
+    top: 80px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid skyblue;
+}
+.proTitle{
+    font: bolder 17px/15px "Microsoft YaHei";
+    color: blue;
+    text-align: center;
+    margin-top: 5px;
+}
+.addform{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.addform label{
+    color: blue;
+    font: normal 17px/15px "Microsoft YaHei";
+}
+.addform input{
+    width: 65%;
+    border-color: #3e98ff;
+    height: 30px;
+    border-radius: 5px;
+}
+.addform textarea{
+    width: 80%;
+    position: absolute;
+    left: 50px;
+    top: 265px;
+    height: 100px;
+    border: 2px solid #3e98ff;
+    border-radius: 5px;
+}
+.SubmissionPro input{
+    background: blue;
+    position: absolute;
+    top: 395px;
+    width: 70px;
+    height: 36px;
+    font: bolder 15px/18px "Microsoft YaHei";
+    color: white;
+    border-radius: 9px;
+    left: 190px;
+}
+.closeImage{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.back{
+    width: 100%;
+    height: 1200px;
+    background: rgba(146,151,162,0.5);
+    position: fixed;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

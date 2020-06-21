@@ -1,3 +1,11 @@
 .idea/
 __pycache__/
 *py[cod].py
+suite/
+secret*
+# secret配置文件
+log/
+case_log/
+report/
+demos/
+rpm.txt/
