@@ -12,7 +12,10 @@ main = Blueprint("web", __name__)
 
 # 路由
 from .views import index
-
+from .views import projects
+from .views import modules
+from .views import cases
+from .views import suites
 # 定义的时候 admin_backend = Blueprint("name", __name__)
 # 路由导入定义的蓝图或者app
 # 初始化app.register_blueprint(admin_backend)

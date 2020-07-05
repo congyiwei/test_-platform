@@ -11,4 +11,11 @@ from app.main import main
 
 @main.route("/")
 def index():
-    return render_template("index.html")
+    projects = [
+        {"project_name": "云", "project_number": "30", "modules_number": "2"},
+        {"project_name": "雾", "project_number": "31", "modules_number": "3"},
+        {"project_name": "风", "project_number": "32", "modules_number": "4"},
+        {"project_name": "雨", "project_number": "33", "modules_number": "5"},
+        {"project_name": "雷", "project_number": "34", "modules_number": "6"}
+    ]
+    return render_template("index.html", projects = projects)

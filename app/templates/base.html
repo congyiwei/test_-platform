@@ -15,10 +15,11 @@
     <div class="menu_list">
         <ul>
 <!--            加a标签进行跳转-->
-            <a href=""><li>首页</li></a>
-            <a href=""><li>接口列表</li></a>
-            <a href=""><li>用例列表</li></a>
-            <a href=""><li>套件列表</li></a>
+            <a href="{{ url_for('web.index') }}" ><li>首页</li></a>
+            <a href="{{ url_for('web.list_projects') }}" ><li>项目列表</li></a>
+            <a href="{{ url_for('web.list_modules') }}"><li>接口列表</li></a>
+            <a href="{{ url_for('web.list_cases') }}"><li>用例列表</li></a>
+            <a href="{{ url_for('web.suites') }}"><li>测试套件</li></a>
             <a href=""><li>测试报告</li></a>
         </ul>
 
@@ -39,15 +40,22 @@
             <li>
                 <h3>接口管理</h3>
                 <ul class="hide">
-                    <li class="leftList"><a href="">添加接口</a></li>
-                    <li class="leftList"><a href="">接口列表</a></li>
+                    <li class="leftList"><a href="{{ url_for('web.create_module') }}">添加接口</a></li>
+                    <li class="leftList"><a href="{{ url_for('web.list_modules') }}">接口列表</a></li>
                 </ul>
             </li>
             <li>
                 <h3>用例管理</h3>
                 <ul class="hide">
-                    <li class="leftList"><a href="">添加用例</a></li>
-                    <li class="leftList"><a href="">用例列表</a></li>
+                    <li class="leftList"><a href="{{ url_for('web.create_case') }}">添加用例</a></li>
+                    <li class="leftList"><a href="{{ url_for('web.list_cases') }}">用例列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3>套件管理</h3>
+                <ul class="hide">
+                    <li class="leftList"><a href="{{ url_for('web.suites') }}">添加套件</a></li>
+                    <li class="leftList"><a href="{{ url_for('web.create_suites') }}">套件列表</a></li>
                 </ul>
             </li>
             <li>
@@ -78,51 +86,21 @@
 </div>
 <!--内容部分-->
 <div class="content">
+    <ul>
+        {% for project in projects %}
     <div class="pro_info">
-        <div class="pro_title">项 目 A</div>
-        <p>用例数量:44</p>
-        <p>接口数量:5</p>
+        <div class="pro_title">{{ project.project_name }}</div>
+        <p>用例数量{{ project.project_number }}</p>
+        <p>接口数量:{{ project.modules_number }}</p>
          <div class="pro_delete">
             <div class="delete_info"><a href="">删除项目</a></div>
         </div>
-    </div>
-        <div class="pro_info">
-        <div class="pro_title">项 目 B</div>
-        <p>用例数量:44</p>
-        <p>接口数量:5</p>
-        <div class="pro_delete">
-            <div class="delete_info"><a href="">删除项目</a></div>
-        </div>
-    </div>
-        <div class="pro_info" >
-        <div class="pro_title">项 目 C</div>
-        <p>用例数量:44</p>
-        <p>接口数量:5</p>
-        <div class="pro_delete">
-            <div class="delete_info"><a href="">删除项目</a></div>
-        </div>
-        </div>
-        <div class="pro_info">
-        <div class="pro_title">项 目 d</div>
-        <p>用例数量:44</p>
-        <p>接口数量:5</p>
-         <div class="pro_delete">
-            <div class="delete_info"><a href="">删除项目</a></div>
-        </div>
-    </div>
-        <div class="pro_info" >
-        <div class="pro_title">项 目 E</div>
-        <p>用例数量:44</p>
-        <p>接口数量:5</p>
-         <div class="pro_delete">
-            <div class="delete_info"><a href="">删除项目</a></div>
-        </div>
-    </div>
+    </div>{% endfor %}
+
         <div class="pro_info" id="addPro" >
             <img src="../static/image/加号_gaitubao_48x48.png" alt="">
-        </div>
-
-    </div>
+        </div></ul>
+</div>
 
 <!-- 增加项目弹框-->
 <div class="back hide">
@@ -146,7 +124,7 @@
             <textarea name="proText" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="SubmissionPro">
-            <input type="submit" value="提交">
+            <input type="button" formmethod="post" value="提交" onclick="location.href='{{ url_for('web.create_project') }}'">
         </div>
 
 
